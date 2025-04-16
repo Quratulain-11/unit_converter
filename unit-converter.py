@@ -6,7 +6,7 @@ st.markdown('### converts length, weight and Time as you want')
 category = st.selectbox('Choose a category',['Length','Weight','Time'])
 
 if category == 'Length':
-    unit = st.selectbox('Select Conversion',['Kilometers to miles','Miles to kiograms'])
+    unit = st.selectbox('Select Conversion',['Kilometers to miles','Miles to kilometers'])
 elif category == 'Weight':
     unit = st.selectbox('Select Conversion',['Kilograms to pounds','Pounds to kilograms'])
 elif category == 'Time':
@@ -18,7 +18,7 @@ def convert_units(category, value, unit):
     if category == 'Length':
         if unit == 'Kilometers to miles':
             return value * 0.621371
-        elif unit == 'Miles to kiogram':
+        elif unit == 'Miles to kilometers':
             return value / 0.621371
         
     elif category == 'Weight':
